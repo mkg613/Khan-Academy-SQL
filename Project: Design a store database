@@ -1,0 +1,25 @@
+/*Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want
+ store to specialize in. You should have a table for all the items in your store, and at least 5 columns 
+ for the kind of data you think you'd need to store. You should sell at least 15 items, and use select 
+ statements to order your items by price and show at least one statistic about the items.*/
+
+CREATE TABLE candy_store(id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price INTEGER, aisle INTEGER);
+
+INSERT INTO candy_store VALUES(1, "chocolate", 2, 4, 5);
+INSERT INTO candy_store VALUES(2, "gummies", 3, 2, 2);
+INSERT INTO candy_store VALUES(3, "cookies", 10, 1, 1);
+INSERT INTO candy_store VALUES(4, "sour candy", 5, 3, 2);
+INSERT INTO candy_store VALUES(5, "cupcakes", 15, 5, 5);
+INSERT INTO candy_store VALUES(6, "chocolate milk", 7, 3, 6);
+INSERT INTO candy_store VALUES(7, "boba", 12, 8, 1);
+INSERT INTO candy_store VALUES(8, "shave ice", 4, 10, 1);
+INSERT INTO candy_store VALUES(9, "candy corn", 50, 1, 4);
+INSERT INTO candy_store VALUES(10, "chocolate wafer", 5, 4, 4);
+INSERT INTO candy_store VALUES(11, "red vines", 12, 5, 3);
+INSERT INTO candy_store VALUES(12, "popcorn", 5, 6, 2);
+INSERT INTO candy_store VALUES(13, "chocolate", 5, 4, 5);
+INSERT INTO candy_store VALUES(14, "chocolate", 5, 4, 6);
+INSERT INTO candy_store VALUES(15, "chocolate", 5, 4, 4);
+
+SELECT * FROM candy_store ORDER BY price ASC;
+SELECT SUM(quantity) FROM candy_store GROUP BY aisle;
